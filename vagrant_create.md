@@ -94,3 +94,25 @@ vagrant init mynewbox
 ## Customize Your New Vagrantfile
 
 When you initialize the Vagrant environment, it creates a Vagrantfile for you (just like from before). Open the Vagrantfile and delete everything. You can use what was in there as a reference or just use Vagrant's Official Docs
+
+# Create new box using existing setup
+
+## Clean the app-get
+```
+sudo apt-get clean
+```
+
+## Clean the history and exit the box
+```
+cat /dev/null > ~/.bash_history && history -c && exit
+```
+
+## Create the box with Vagrantfile
+
+```
+vagrant package --vagrantfile Vagrantfile --output hyper.box
+```
+### Upload the box to the Vagrant Cloud
+
+A [Manual](https://www.vagrantup.com/docs/cli/cloud.html) describes how we can achive this using `cli`
+
