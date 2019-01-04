@@ -116,3 +116,13 @@ vagrant package --vagrantfile Vagrantfile --output hyper.box
 
 A [Manual](https://www.vagrantup.com/docs/cli/cloud.html) describes how we can achive this using `cli`
 
+
+# More resources
+
+[1. CheatSheet and description](https://elatov.github.io/2014/06/upload-vagrant-box-to-the-vagrant-cloud/)
+
+[2. Vagrant Snapshots](https://www.vagrantup.com/docs/cli/snapshot.html)
+
+[3. Creating Base boxes](https://www.vagrantup.com/docs/virtualbox/boxes.html)
+
+[4. CheatSheet from Linux Academy](https://linuxacademy.com/blog/linux/vagrant-cheat-sheet-get-started-with-vagrant/)
