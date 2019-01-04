@@ -1,5 +1,7 @@
 # Documentation
 
-##Configs and Setups
+## Configs and Setups
 
 ### Use this repository for everyday setups and configurations.
+
+
