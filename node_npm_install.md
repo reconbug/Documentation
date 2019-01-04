@@ -4,26 +4,49 @@
 
 ## Using ubuntu
 ```
-curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -
+cd ~
+```
+```
+curl -sL https://deb.nodesource.com/setup_11.x -o nodesource_setup.sh
+```
+```
+chmod 764 nodesource_setup.sh 
+```
+```
+sudo bash nodesource_setup.sh 
+```
+```
 sudo apt-get install -y nodejs
 ```
 
 ## Node.js v10.x:
 ```
-curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+cd ~
+```
+```
+curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh
+```
+```
+chmod 764 nodesource_setup.sh 
+```
+```
+sudo bash nodesource_setup.sh 
+```
+```
 sudo apt-get install -y nodejs
+
 ```
 
-## Node.js v8.x:
+## Commands will be shown in the Output of above
 ```
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-sudo apt-get install -y nodejs
-```
+# Run `sudo apt-get install -y nodejs` to install Node.js 10.x and npm
+## You may also need development tools to build native addons:
+     sudo apt-get install gcc g++ make
+## To install the Yarn package manager, run:
+     curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+     echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+     sudo apt-get update && sudo apt-get install yarn
 
-## Node.js v6.x:
-```
-curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-sudo apt-get install -y nodejs
 ```
 
 # Optional: install build tools
