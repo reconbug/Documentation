@@ -116,7 +116,7 @@ vagrant package --vagrantfile Vagrantfile --output hyper.box
 
 A [Manual](https://www.vagrantup.com/docs/cli/cloud.html) describes how we can achive this using `cli`
 
-## Create Vagrant Box using .ova file
+# Create Vagrant Box using .ova file
 
 Sometimes distribution providers (such as UCS) only give you VirtualBox .ova files to test their software. Here is how you can easily and non-interactively import a .ova file into a .box for use with Vagrant.
 
@@ -129,27 +129,27 @@ Disks:  vmdisk1 53687091200     -1      http://www.vmware.com/interfaces/specifi
 ...
 0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
 Successfully imported the appliance.                           
-Then list your VMs to find the VM ID:
 ```
+## Then list your VMs to find the VM ID:
 
 ```
 $ VBoxManage list vms
 "UCS 4.1" {acef4c0a-35be-4640-a214-be135417f04d}
-You can now package that VM as a Vagrant box:
 ```
+## You can now package that VM as a Vagrant box:
 
 ```
 $ vagrant package --base acef4c0a-35be-4640-a214-be135417f04d --output UCS.box                                                                                                                             
 ==> acef4c0a-35be-4640-a214-be135417f04d: Exporting VM...                                                                                                                                                
 ==> acef4c0a-35be-4640-a214-be135417f04d: Compressing package to: /home/crohr/dev/ucs/UCS.box                                                                                           
-And add it to the list of your local Vagrant boxes:
 ```
+## And add it to the list of your local Vagrant boxes:
 
 ```
 $ vagrant box add UCS.box --name UCS
 ```
 
-Finally, you can create a Vagrantfile to use this box:
+## Finally, you can create a Vagrantfile to use this box:
 ```
 Vagrant.configure("2") do |config|
   config.vm.box = "UCS"
